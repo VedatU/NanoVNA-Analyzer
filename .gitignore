@@ -1,0 +1,44 @@
+# ---- MATLAB artifacts ----
+*.asv
+*.m~
+*.autosave
+*.mex*
+slprj/
+sccprj/
+codegen/
+*.slxc
+
+# MATLAB data files. The repo ships no .mat files, and the app now stores its
+# calibration presets in prefdir rather than the working directory, so anything
+# matching this pattern is local state.
+*.mat
+
+# ---- Instrument output that does not belong in version control ----
+# Raw sweep and acquisition exports can run to hundreds of megabytes.
+*.tradb
+*.pridb
+*.DTA
+*.csv
+*.lox
+cache_config.mat
+
+# Touchstone files are NOT ignored. The four sweeps under
+# examples/sample_data/ are committed on purpose so the repo runs out of the
+# box. If you accumulate your own sweeps elsewhere, keep them out of the tree
+# or add a targeted rule here.
+
+# ---- Logs ----
+*.log
+*_Log.txt
+
+# ---- OS files ----
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ---- Editors ----
+.vscode/
+.idea/
